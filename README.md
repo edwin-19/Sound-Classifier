@@ -3,6 +3,6 @@ Using torch audio to try and understand how to build a simple classifier to pred
 
 # TODO
 - [x] EDA for sound - generate melspectogram
-- [] Train with simple cnn
-- [] Augment Data
-- [] Train with resnet50
+- [ ] Train with simple cnn
+- [ ] Augment Data
+- [ ] Train with resnet50
