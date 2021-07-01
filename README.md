@@ -3,6 +3,10 @@ Using torch audio to try and understand how to build a simple classifier to pred
 
 # TODO
 - [x] EDA for sound - generate melspectogram
-- [ ] Train with simple cnn
+- [x] Train with simple cnn
+- [ ] Evaluate Model
 - [ ] Augment Data
 - [ ] Train with resnet50
+
+# References
+https://towardsdatascience.com/audio-deep-learning-made-simple-sound-classification-step-by-step-cebc936bbe5
