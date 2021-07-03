@@ -5,7 +5,7 @@ Using torch audio to try and understand how to build a simple classifier to pred
 - [x] EDA for sound - generate melspectogram
 - [x] Train with simple cnn
 - [x] Evaluate Model
-- [ ] Augment Data
+- [x] Augment Data
 - [ ] Train with resnet50
 - [ ] Train CRNN Model
 - [ ] Add pytorch lighthing for sample usage
