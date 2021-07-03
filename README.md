@@ -9,6 +9,7 @@ Using torch audio to try and understand how to build a simple classifier to pred
 - [ ] Train with resnet50
 - [ ] Train CRNN Model
 - [ ] Add pytorch lighthing for sample usage
+- [ ] Add torch lighthing datamodule
 
 # Model Results
 TBA
