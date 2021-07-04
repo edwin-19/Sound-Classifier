@@ -31,7 +31,7 @@ class SoundUtil(object):
             return aud
         
         num_channels = sig.shape[0]
-        resig = torchaudio.transforms(Resample, new_sr)(sig[:1, :])
+        resig = torchaudio.transforms.Resample(sr, new_sr)(sig[:1, :])
         if num_channels > 1:
             # Resample the second channel and merge both channels
             retwo = torchaudio.transforms.Resample(sr, new_sr)(sig[1:, :])
@@ -49,7 +49,7 @@ class SoundUtil(object):
             sig = sig[:, :max_len] 
         elif sig_len < max_len:
             # Pad
-            pad_begin_len = np.random.randint(0, max_len - sig_len, (1,))
+            pad_begin_len = random.randint(0, max_len - sig_len)
             pad_end_len = max_len - sig_len - pad_begin_len
             
             # Pad with 0s
@@ -66,7 +66,7 @@ class SoundUtil(object):
         spec = torchaudio.transforms.MelSpectrogram(
             sr, n_fft=n_fft, hop_length=hop_len, n_mels=n_mels
         )(sig)
-        spec = torchaudio.transforms.AmplitudeToDB(top_db=top_db)(sig)
+        spec = torchaudio.transforms.AmplitudeToDB(top_db=top_db)(spec)
         
         return spec
     
@@ -82,7 +82,7 @@ class SoundUtil(object):
         _, n_mels, n_steps = spec.shape
         mask_value = spec.mean()
         aug_spec = spec
-        
+
         freq_mask_param = max_mask_pct * n_mels
         for _ in range(n_freq_masks):
             aug_spec = torchaudio.transforms.FrequencyMasking(freq_mask_param)(aug_spec, mask_value)

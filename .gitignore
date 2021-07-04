@@ -2,3 +2,5 @@ data/
 .ipynb_checkpoints/
 weights/
 .vscode/
+spare/
+lightning_logs/
