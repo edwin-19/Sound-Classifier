@@ -6,13 +6,17 @@ Using torch audio to try and understand how to build a simple classifier to pred
 - [x] Train with simple cnn
 - [x] Evaluate Model
 - [x] Augment Data
-- [ ] Train with resnet50
+- [x] Train with resnet50
 - [x] Train CRNN Model
 - [x] Add pytorch lighthing for sample usage
 - [x] Add torch lighthing data module
 
 # Model Results
-TBA
+| Model Name  | Accuracy | MCC  |
+|-------------|----------|------|
+| CNN Vanilla | 0.69     | 0.39 |
+| CRNN        | 0.66     | 0.32 |
+| Resnet 50   | 0.93     | 0.86 |
 
 # References
 - https://towardsdatascience.com/audio-deep-learning-made-simple-sound-classification-step-by-step-cebc936bbe5
